@@ -59,28 +59,29 @@ You need to download [KITTI raw dataset](http://www.cvlibs.net/datasets/kitti/ra
 
 You need to download image sequence `leftImg8bit_sequence_trainvaltest.zip`  and calibration file `camera_trainvaltest.zip`  from [Cityscapes website](https://www.cityscapes-dataset.com/downloads/) (registration is needed to download the data), then the data is processed with the following three steps:
 
-- Generate training data
+1. Generate training data
 
-  ```shell
-  python prepare.py \
-  --dataset cityscapes \
-  --dataset_dir /path/to/cityscapes/data \
-  --dump_root /path/to/save/processed/data \
-  --gen_data
-  ```
+     ```shell
+     python prepare.py \
+     --dataset cityscapes \
+     --dataset_dir /path/to/cityscapes/data \
+     --dump_root /path/to/save/processed/data \
+     --gen_data
+     ```
 
-- Instance segmentation
+2. Instance segmentation
 
-  Same as KITTI.
+   Same as KITTI.
 
-- Align segments across frames
+3. Align segments across frames
 
-  ```shell
-  python prepare.py \
-  --dataset cityscapes \
-  --dump_root /path/to/processed/data \
-  --align_seg
-  ```
+
+     ```shell
+     python prepare.py \
+     --dataset cityscapes \
+     --dump_root /path/to/processed/data \
+     --align_seg
+     ```
 
 
 ## Training
